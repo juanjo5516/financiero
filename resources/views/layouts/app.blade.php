@@ -77,7 +77,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <!-- Brand Logo -->
       <a href="index3.html" class="brand-link">
         <img src="./img/logo.png" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-        <span class="brand-text font-weight-light">Recursos Humanos</span>
+        <span class="brand-text font-weight-light">Financiero</span>
       </a>
 
       <!-- Sidebar -->
@@ -102,21 +102,33 @@ scratch. This page gets rid of all links and provides the needed markup only.
               <a href="#" class="nav-link active">
                 <i class="nav-icon fas fa-tachometer-alt"></i>
                 <p>
-                  Starter Pages
+                  Catálogos
                   <i class="right fas fa-angle-left"></i>
                 </p>
               </a>
               <ul class="nav nav-treeview">
                 <li class="nav-item">
-                  <a href="#" class="nav-link active">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Active Page</p>
+                  <a href="/catalogos/programa" class="nav-link active">
+                    <i class="fas fa-circle nav-icon"></i>
+                    <p>Programa</p>
                   </a>
                 </li>
                 <li class="nav-item">
                   <a href="#" class="nav-link">
-                    <i class="far fa-circle nav-icon"></i>
-                    <p>Inactive Page</p>
+                    <i class="fas fa-circle nav-icon"></i>
+                    <p>Actividad</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="fas fa-circle nav-icon"></i>
+                    <p>Renglon</p>
+                  </a>
+                </li>
+                <li class="nav-item">
+                  <a href="#" class="nav-link">
+                    <i class="fas fa-circle nav-icon"></i>
+                    <p>Fuente</p>
                   </a>
                 </li>
               </ul>
@@ -161,7 +173,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
       <div class="content">
         <div class="container-fluid">
           <div class="row">
-            <div class="col-lg-12">
+            <div class="col-lg-12" id="app">
               @yield('content')
 
 
