@@ -1959,6 +1959,21 @@ __webpack_require__.r(__webpack_exports__);
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
@@ -37680,19 +37695,64 @@ var render = function() {
       ]
     ),
     _vm._v(" "),
-    _c(
-      "div",
-      { staticClass: "w-25" },
-      _vm._l(_vm.programas, function(programa) {
-        return _c("div", { key: programa.id, staticClass: "w-100" }, [
-          _vm._v("\n      " + _vm._s(programa.numero) + "\n    ")
-        ])
-      }),
-      0
-    )
+    _c("table", { staticClass: "table mt-5" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c(
+        "tbody",
+        _vm._l(_vm.programas, function(programa) {
+          return _c("tr", { key: programa.id, staticClass: "w-100" }, [
+            _c("td", [_vm._v(_vm._s(programa.id))]),
+            _vm._v(" "),
+            _c("td", [_vm._v(_vm._s(programa.numero))]),
+            _vm._v(" "),
+            _c("td", [_vm._v(_vm._s(programa.programa))]),
+            _vm._v(" "),
+            _vm._m(1, true)
+          ])
+        }),
+        0
+      )
+    ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", { staticClass: "thead-dark" }, [
+      _c("tr", [
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("#")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Número")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Programa")]),
+        _vm._v(" "),
+        _c("th", { attrs: { scope: "col" } }, [_vm._v("Programa")])
+      ])
+    ])
+  },
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("td", [
+      _c(
+        "button",
+        {
+          staticClass: "btn btn-outline-danger",
+          attrs: {
+            type: "button",
+            "data-toggle": "modal",
+            "data-target": "#modal_eliminar"
+          }
+        },
+        [_vm._v("Eliminar")]
+      )
+    ])
+  }
+]
 render._withStripped = true
 
 

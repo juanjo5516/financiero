@@ -1,5 +1,7 @@
 <template>
   <div>
+    
+    
     <form v-on:submit.prevent="saveData">
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">No. programa</label>
@@ -9,7 +11,6 @@
           type="text"
           class="form-control"
           @keydown="form.errors.clear('numero')"
-
         />
       </div>
       <div class="mb-3">
@@ -18,17 +19,31 @@
           v-model="form.programa"
           type="text"
           class="form-control"
-
         />
       </div>
       <button type="submit" class="btn btn-primary">Guardar</button>
       <span class="text-danger pt-3" v-if="form.errors.has('numero')" v-text="form.errors.get('numero')"></span>
     </form>
-    <div class="w-25">
-      <div v-for="programa in programas" :key="programa.id" class="w-100">
-        {{programa.numero}}
-      </div>
-    </div>
+    
+    <table class="table mt-5">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">Número</th>
+          <th scope="col">Programa</th>
+          <th scope="col">Programa</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr v-for="programa in programas" :key="programa.id" class="w-100">
+          <td>{{programa.id}}</td>
+          <td>{{programa.numero}}</td>
+          <td>{{programa.programa}}</td>
+          <td><button type="button" class="btn btn-outline-danger"  data-toggle="modal" data-target="#modal_eliminar">Eliminar</button></td>
+        </tr>
+      </tbody>
+    </table>
+    
   </div>
 </template>
 
