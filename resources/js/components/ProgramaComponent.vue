@@ -1,7 +1,6 @@
 <template>
   <div>
     
-    
     <form v-on:submit.prevent="saveData">
       <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">No. programa</label>
@@ -24,14 +23,14 @@
       <button type="submit" class="btn btn-primary">Guardar</button>
       <span class="text-danger pt-3" v-if="form.errors.has('numero')" v-text="form.errors.get('numero')"></span>
     </form>
-    
+    <modal-component v-bind:url="url"></modal-component>
     <table class="table mt-5">
       <thead class="thead-dark">
         <tr>
           <th scope="col">#</th>
           <th scope="col">Número</th>
           <th scope="col">Programa</th>
-          <th scope="col">Programa</th>
+          <th scope="col">Acciones</th>
         </tr>
       </thead>
       <tbody>
@@ -39,7 +38,7 @@
           <td>{{programa.id}}</td>
           <td>{{programa.numero}}</td>
           <td>{{programa.programa}}</td>
-          <td><button type="button" class="btn btn-outline-danger"  data-toggle="modal" data-target="#modal_eliminar">Eliminar</button></td>
+          <td><a href="" type="button" class="btn btn-outline-danger"  data-toggle="modal" data-target="#modal_eliminar" v-on:click="setUrl('/api/programa/'+ programa.id)">Eliminar</a></td>
         </tr>
       </tbody>
     </table>
@@ -48,23 +47,35 @@
 </template>
 
 <script>
+import ModalComponent from './ModalComponent.vue';
 export default {
   data() {
     return {
       programas:'',
       form: new Form({
         numero: '',
-        programa:''
-      })
+        programa:'',
+        id_eliminar:''
+      }),
+      url: ''
     }
   },
+  components: {
+    ModalComponent
+  },
   methods:{
+    setUrl(url) {
+      this.url = url
+    },
     getPrograma(){
       axios.get('/api/programa').then((res) =>{
         this.programas = res.data
       }).catch((error)=>{
         console.log(error)
       })
+    },
+    eliminarData(){
+        
     },
     saveData(){
       console.log("Listo.");

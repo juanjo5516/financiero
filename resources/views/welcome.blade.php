@@ -97,7 +97,7 @@
             </div>
 
             <div class="title m-b-md">
-                Sistema Recursos Humanos!
+                ¡Sistema Financiero Mineco!
             </div>
 
 <!--             <div class="links">

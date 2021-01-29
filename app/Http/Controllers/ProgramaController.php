@@ -85,8 +85,12 @@ class ProgramaController extends Controller
      * @param  \App\Programa  $programa
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Programa $programa)
+    public function destroy($programa)
     {
-        //
+        // logica de eliminar.
+        //Programa::findOrFail($request)->delete();
+        Programa::findOrFail($programa)->delete();
+ 
+        return response()->json('todo ok', 200);
     }
 }

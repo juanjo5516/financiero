@@ -7,11 +7,17 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        ...
+        ¿Desea eliminar este Registro?
+        <span>{{route('programa.index')}}</span>
+        
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">No</button>
+        <form action="{{route('programa.index')}}" method="post">
+          @csrf
+          @method('delete')
+          <button type="submit" class="btn btn-primary">Si</button>
+        </form>
       </div>
     </div>
   </div>

@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    <h1>Bienvenidos al sistema de Financiero!</h1>
+                    <h1>¡Bienvenidos al sistema de Financiero!</h1>
    
                 </div>
             </div>
