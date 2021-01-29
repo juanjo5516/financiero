@@ -22,13 +22,14 @@
 </template>
 <script>
 export default {
-    props: ['url'],
+    props: ['url','nombre_form'],
     methods: {
         borrar() {
             axios.delete(this.url)
             .then(response => {
                 console.log(response.data)
-                location.href="/catalogos/programa"
+                console.log(this.nombre_form)
+                location.href="/catalogos/"+this.nombre_form
             })
             .cath(error => {
                 console.log(error)

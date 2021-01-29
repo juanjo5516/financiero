@@ -24,3 +24,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::get('/catalogos/programa', function () {
     return view('catalogos.programa');
 });
+
+Route::get('/catalogos/actividad', function () {
+    return view('catalogos.actividad');
+});

@@ -22,6 +22,7 @@ window.Form = Form;
 // files.keys().map(key => Vue.component(key.split('/').pop().split('.')[0], files(key).default))
 
 Vue.component('programa-component', require('./components/ProgramaComponent.vue').default);
+Vue.component('actividad-component', require('./components/ActividadComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

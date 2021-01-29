@@ -3,7 +3,7 @@
     
     <form v-on:submit.prevent="saveData">
       <div class="mb-3">
-        <label for="exampleInputEmail1" class="form-label">No. programa</label>
+        <label for="exampleInputEmail1" class="form-label">No. Actividad</label>
         <input
           v-model="form.numero"
           :class="{'is-invalid': form.errors.has('numero')}"
@@ -13,9 +13,9 @@
         />
       </div>
       <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Programa</label>
+        <label for="exampleInputPassword1" class="form-label">Actividad</label>
         <input
-          v-model="form.programa"
+          v-model="form.actividad"
           type="text"
           class="form-control"
         />
@@ -29,16 +29,16 @@
         <tr>
           <th scope="col">#</th>
           <th scope="col">Número</th>
-          <th scope="col">Programa</th>
+          <th scope="col">Actividad</th>
           <th scope="col">Acciones</th>
         </tr>
       </thead>
       <tbody>
-        <tr v-for="programa in programas" :key="programa.id" class="w-100">
-          <td>{{programa.id}}</td>
-          <td>{{programa.numero}}</td>
-          <td>{{programa.programa}}</td>
-          <td><a href="" type="button" class="btn btn-outline-danger"  data-toggle="modal" data-target="#modal_eliminar" v-on:click="setUrl('/api/'+nombre_form +'/'+ programa.id)">Eliminar</a></td>
+        <tr v-for="actividad in actividades" :key="actividad.id" class="w-100">
+          <td>{{actividad.id}}</td>
+          <td>{{actividad.numero}}</td>
+          <td>{{actividad.actividad}}</td>
+          <td><a href="" type="button" class="btn btn-outline-danger"  data-toggle="modal" data-target="#modal_eliminar" v-on:click="setUrl('/api/'+nombre_form +'/'+ actividad.id)">Eliminar</a></td>
         </tr>
       </tbody>
     </table>
@@ -51,13 +51,14 @@ import ModalComponent from './ModalComponent.vue';
 export default {
   data() {
     return {
-      programas:'',
+      actividades:'',
       form: new Form({
         numero: '',
-        programa:'',
+        actividad:'',
         id_eliminar:''
       }),
-      url: ''
+      url: '',
+      nombre_form:''
     }
   },
   components: {
@@ -67,9 +68,9 @@ export default {
     setUrl(url) {
       this.url = url
     },
-    getPrograma(){
-      axios.get('/api/programa').then((res) =>{
-        this.programas = res.data
+    getActividad(){
+      axios.get('/api/actividad').then((res) =>{
+        this.actividades = res.data
       }).catch((error)=>{
         console.log(error)
       })
@@ -81,19 +82,19 @@ export default {
       console.log("Listo.");
       let data = new FormData();
       data.append('numero',this.form.numero)
-      data.append('programa',this.form.programa)
+      data.append('actividad',this.form.actividad)
       console.log(data);
-      axios.post('/api/programa',data).then((res)=>{
+      axios.post('/api/actividad',data).then((res)=>{
         this.form.reset()
-        this.getPrograma()
+        this.getActividad()
       }).catch((error) => {
         this.form.errors.record(error.response.data.errors)
       })
     }
   },
   mounted() {
-    this.getPrograma();
-    this.nombre_form='programa';
+    this.getActividad();
+    this.nombre_form='actividad';
     console.log("Component mounted.");
   },
 };
