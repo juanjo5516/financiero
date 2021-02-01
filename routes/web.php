@@ -28,3 +28,11 @@ Route::get('/catalogos/programa', function () {
 Route::get('/catalogos/actividad', function () {
     return view('catalogos.actividad');
 });
+
+Route::get('catalogos/renglon', function (){
+    return view('catalogos.renglon');
+});
+
+Route::get('catalogos/fuente', function (){
+    return view('catalogos.fuente');
+});

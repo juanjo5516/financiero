@@ -23,6 +23,8 @@ window.Form = Form;
 
 Vue.component('programa-component', require('./components/ProgramaComponent.vue').default);
 Vue.component('actividad-component', require('./components/ActividadComponent.vue').default);
+Vue.component('renglon-component', require('./components/RenglonComponent.vue').default);
+Vue.component('fuente-component', require('./components/FuenteComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

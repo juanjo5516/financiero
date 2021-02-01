@@ -10,7 +10,7 @@ scratch. This page gets rid of all links and provides the needed markup only.
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="x-ua-compatible" content="ie=edge">
 
-  <title>Financiero</title>
+  <title>Recursos Humanos</title>
 
   <link rel="stylesheet" href="/css/app.css">
 </head>
@@ -120,13 +120,13 @@ scratch. This page gets rid of all links and provides the needed markup only.
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link">
+                  <a href="/catalogos/renglon" class="nav-link">
                     <i class="fas fa-circle nav-icon"></i>
                     <p>Renglon</p>
                   </a>
                 </li>
                 <li class="nav-item">
-                  <a href="#" class="nav-link">
+                  <a href="/catalogos/fuente" class="nav-link">
                     <i class="fas fa-circle nav-icon"></i>
                     <p>Fuente</p>
                   </a>

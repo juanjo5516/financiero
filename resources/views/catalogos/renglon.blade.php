@@ -1,8 +1,8 @@
 @extends('layouts.app')
 @section('content')
   <div id="app">
-    <h1>Programa</h1>
+    <h1>Renglon</h1>
     </span>
-    <programa-component></programa-component>
+    <renglon-component></renglon-component>
   </div>
 @endsection

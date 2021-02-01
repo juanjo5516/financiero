@@ -21,3 +21,7 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 Route::resource('programa','ProgramaController');
 
 Route::resource('actividad','ActividadController');
+
+Route::resource('renglon','RenglonController');
+
+Route::resource('fuente','FuenteController');
