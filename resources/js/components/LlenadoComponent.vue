@@ -37,6 +37,7 @@
     </form>
 
     <modal-component v-bind:url="url" v-bind:nombre_form="nombre_form"></modal-component>
+    <modal-subproducto-component></modal-subproducto-component>
     <table class="table mt-5">
       <thead class="thead-dark">
         <tr>
@@ -53,7 +54,7 @@
           <td>{{imprimirColumn(fila)}}</td>
           <td>
             <a href="" type="button" class="btn btn-outline-danger"  data-toggle="modal" data-target="#modal_eliminar" v-on:click="setUrl('/api/'+nombre_tabla+'/'+ fila.id)">Eliminar</a>
-            <a v-if="nombre_tabla==='producto'" href="" type="button" class="btn btn-outline-primary" v-on:click="setUrl('/api/'+nombre_tabla+'/'+ fila.id)">Categorías</a>
+            <a v-if="nombre_tabla==='producto'" href="" type="button" class="btn btn-outline-primary" data-toggle="modal" data-target="#modal_subproducto">Categorías</a>
           </td>
         </tr>
       </tbody>
@@ -64,6 +65,7 @@
 
 <script>
 import ModalComponent from './ModalComponent.vue';
+import ModalSubproductoComponent from './ModalSubproductoComponent.vue';
 export default {
   data() {
     return {
@@ -91,7 +93,8 @@ export default {
     }
   },
   components: {
-    ModalComponent
+    ModalComponent,
+    ModalSubproductoComponent
   },
   watch:{
       nombre_tabla (){

@@ -33,3 +33,5 @@ Route::resource('unidad_ejecutora','UnidadEjecutoraController');
 Route::resource('centro_costo','CentroCostoController');
 
 Route::resource('producto','ProductoController');
+
+Route::resource('subproducto','SubproductoController');
