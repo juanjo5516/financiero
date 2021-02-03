@@ -27,9 +27,7 @@ export default {
         borrar() {
             axios.delete(this.url)
             .then(response => {
-                console.log(response.data)
-                console.log(this.nombre_form)
-                location.href="/catalogos/"+this.nombre_form
+                location.href="/catalogos/llenado"
             })
             .cath(error => {
                 console.log(error)

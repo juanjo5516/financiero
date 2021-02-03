@@ -131,6 +131,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
                     <p>Fuente</p>
                   </a>
                 </li>
+                <li class="nav-item">
+                  <a href="/catalogos/llenado" class="nav-link">
+                    <i class="fas fa-circle nav-icon"></i>
+                    <p>Llenado</p>
+                  </a>
+                </li>
               </ul>
             </li>
             <li class="nav-item">

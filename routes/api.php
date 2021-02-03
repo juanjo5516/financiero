@@ -25,3 +25,11 @@ Route::resource('actividad','ActividadController');
 Route::resource('renglon','RenglonController');
 
 Route::resource('fuente','FuenteController');
+
+Route::resource('entidad','EntidadController');
+
+Route::resource('unidad_ejecutora','UnidadEjecutoraController');
+
+Route::resource('centro_costo','CentroCostoController');
+
+Route::resource('producto','ProductoController');

@@ -36,3 +36,7 @@ Route::get('catalogos/renglon', function (){
 Route::get('catalogos/fuente', function (){
     return view('catalogos.fuente');
 });
+
+Route::get('catalogos/llenado', function (){
+    return view('catalogos.llenado');
+});
