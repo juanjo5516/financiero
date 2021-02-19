@@ -40,3 +40,7 @@ Route::get('catalogos/fuente', function (){
 Route::get('catalogos/llenado', function (){
     return view('catalogos.llenado');
 });
+
+Route::get('relaciones/programa-actividad', function (){
+    return view('relaciones.programa_actividad');
+});

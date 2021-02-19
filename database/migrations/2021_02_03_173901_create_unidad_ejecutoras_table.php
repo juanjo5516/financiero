@@ -16,7 +16,7 @@ class CreateUnidadEjecutorasTable extends Migration
         Schema::create('unidad_ejecutoras', function (Blueprint $table) {
             $table->id();
             $table->string('numero',3);
-            $table->string('unidad_ejecutora',50);
+            $table->string('unidad_ejecutora',100);
             $table->timestamps();
         });
     }

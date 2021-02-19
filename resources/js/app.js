@@ -26,6 +26,7 @@ Vue.component('actividad-component', require('./components/ActividadComponent.vu
 Vue.component('renglon-component', require('./components/RenglonComponent.vue').default);
 Vue.component('fuente-component', require('./components/FuenteComponent.vue').default);
 Vue.component('llenado-component', require('./components/LlenadoComponent.vue').default);
+Vue.component('programa-actividad-component', require('./components/ProgramaActividadComponent.vue').default);
 
 /**
  * Next, we will create a fresh Vue application instance and attach it to

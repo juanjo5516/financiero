@@ -16,7 +16,7 @@ class CreateRenglonsTable extends Migration
         Schema::create('renglons', function (Blueprint $table) {
             $table->id();
             $table->string('numero',3);
-            $table->string('renglon',50);
+            $table->string('renglon',100);
             $table->timestamps();
         });
     }

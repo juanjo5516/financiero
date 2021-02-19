@@ -158,7 +158,6 @@ export default {
   },
   mounted() {
     this.nombre_form=this.nombre_tabla;
-    
     console.log("Component mounted.");
   },
 };

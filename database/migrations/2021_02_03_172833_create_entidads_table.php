@@ -15,8 +15,8 @@ class CreateEntidadsTable extends Migration
     {
         Schema::create('entidads', function (Blueprint $table) {
             $table->id();
-            $table->string('numero',3);
-            $table->string('entidad',50);
+            $table->string('numero',8);
+            $table->string('entidad',100);
             $table->timestamps();
         });
     }
